@@ -6,6 +6,8 @@ func = function(n) {
 
 
 for (i = 0; i < 10; i++) {
-	func(i);
+	n = i;
+	f = func.bind(this);
+	setTimeout(func, i * 100);
 }
 
